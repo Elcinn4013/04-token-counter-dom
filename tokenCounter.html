@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>LLM Dashboard</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#what-is-llm">What is an LLM?</a></li>
+            <li><a href="#what-is-token">What is a Token?</a></li>
+            <li><a href="#comparison">LLM Comparison</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="tokenCounter">
+            <h2>Token Counter</h2>
+            <p>Paste any English text below to estimate how many tokens it would consume when sent to an AI model.</p>
+            <textarea id="inputText" rows="6" placeholder="Type or paste your text here..."></textarea>
+            <p id="result">Estimated tokens: 0</p>
+            <div id="stats">
+                <span id="stat-chars">Characters: 0</span>
+                <span id="stat-words">Words: 0</span>
+                <span id="stat-tokens">Estimated tokens: 0</span>
+
+            </div>
+            <div>
+                <button id="save-btn">Save Snapshot</button>
+                <button id="clear-btn">Clear History</button>
+            </div>
+            <ul id="history-list"></ul>
+        </section>
+
+    </main>
+    <footer>
+        <p><em>Sources used: Up-to-date model specifications and pricing gathered from official provider documentation
+                (OpenAI, Anthropic, Google, DeepSeek) and <a href="https://artificialanalysis.ai/"
+                    target="_blank">Artificial Analysis</a>.</em></p>
+    </footer>
+    <script src="tokenCounter.js"></script>
+</body>
+
+</html>

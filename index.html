@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>LLM Dashboard</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#what-is-llm">What is an LLM?</a></li>
+            <li><a href="#what-is-token">What is a Token?</a></li>
+            <li><a href="#comparison">LLM Comparison</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="tokenCounter.html">Token Counter</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section id="what-is-llm">
+            <h2>What is an LLM?</h2>
+            <p><strong>LLM</strong> stands for <strong>Large Language Model</strong>. It is a highly advanced type of
+                artificial intelligence designed to understand, generate, and interact with human language.</p>
+            <p>LLMs work by being trained on massive datasets containing billions of words from books, articles, and
+                websites. Through deep learning neural networks, they learn the complex statistical relationships
+                between words, allowing them to accurately predict the next most likely token in a sequence to generate
+                coherent text.</p>
+            <p>Some popular real-world examples of LLMs include <strong>GPT-4o</strong> by OpenAI and <strong>Claude 3.5
+                    Sonnet</strong> by Anthropic.</p>
+        </section>
+
+        <section id="what-is-token">
+            <h2>What is a Token?</h2>
+            <p>In the context of LLMs, a <strong>token</strong> is the fundamental unit of data processed by the AI. A
+                token is not always a full word; it is simply a chunk of text. On average, in English, a single token is
+                roughly 3-4 characters long, or about ¾ of a typical word.</p>
+            <p>Tokens matter deeply because they are the primary unit of measurement in AI. A model's <em>context
+                    window</em> is measured in tokens (defining how much text it can process at once), and providers
+                base their <em>pricing</em> strictly on the number of tokens processed.</p>
+            <p>For example, the simple sentence "Hello, world!" might be split into four distinct tokens:
+                ["Hello", ",", " world", "!"]
+            </p>
+            <p><strong>English vs. Azerbaijani:</strong> AI models are primarily trained on English text, so
+                tokenization is highly optimized for it. A standard English word is usually 1 token. However, in
+                Azerbaijani, a word like "gələcəyik" might be split into 3 or 4 separate tokens because the model
+                doesn't recognize it as a single unit. As a result, processing Azerbaijani text consumes significantly
+                more tokens and costs more compared to English.</p>
+        </section>
+
+        <section id="comparison">
+            <h2>LLM Comparison</h2>
+            <table>
+                <caption>A technical and pricing comparison of today's most popular Large Language Models.</caption>
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Provider</th>
+                        <th>Context Window</th>
+                        <th>Input Price (per 1M tokens)</th>
+                        <th>Output Price (per 1M tokens)</th>
+                        <th>Reasoning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GPT-4o</td>
+                        <td>OpenAI</td>
+                        <td>128K</td>
+                        <td>$5.00</td>
+                        <td>$15.00</td>
+                        <td><span class="cross-icon">✗</span></td>
+                    </tr>
+                    <tr>
+                        <td>o1-preview</td>
+                        <td>OpenAI</td>
+                        <td>128K</td>
+                        <td>$15.00</td>
+                        <td>$60.00</td>
+                        <td><span class="check-icon">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Claude 3.5 Sonnet</td>
+                        <td>Anthropic</td>
+                        <td>200K</td>
+                        <td>$3.00</td>
+                        <td>$15.00</td>
+                        <td><span class="cross-icon">✗</span></td>
+                    </tr>
+                    <tr>
+                        <td>Gemini 1.5 Pro</td>
+                        <td>Google</td>
+                        <td>2M</td>
+                        <td>$1.25</td>
+                        <td>$5.00</td>
+                        <td><span class="cross-icon">✗</span></td>
+                    </tr>
+                    <tr>
+                        <td>DeepSeek R1</td>
+                        <td>DeepSeek</td>
+                        <td>128K</td>
+                        <td>$0.55</td>
+                        <td>$2.19</td>
+                        <td><span class="check-icon">✓</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="model-cards">
+            <h2>Model Cards</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="logo-box">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBdcgkdcDy5z4PYGx_kDJB1AvvC_x1pCBbbQ&s"
+                                alt="OpenAI">
+                        </div>
+                        <div class="text">
+                            <span class="card-provider">OPENAI</span>
+                            <span class="card-reasoning reasoning-yes">Reasoning</span>
+                        </div>
+                    </div>
+                    <h3 class="card-name">GPT-4o</h3>
+                    <p class="card-tagline">Best for multimodal tasks, coding assistance, and real-time voice
+                        interactions.</p>
+                    <ul class="card-specs">
+                        <li><span class="spec-label">Context</span><span class="spec-value">200K</span></li>
+                        <li><span class="spec-label">Input</span><span class="spec-value">$2.50 / 1M</span></li>
+                        <li><span class="spec-label">Output</span><span class="spec-value">$10 / 1M</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="logo-box">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU1PdBd0XMyzREeMuVP18JIDkhBXJKY4ufTQ&s"
+                                alt="OpenAI">
+                        </div>
+                        <div class="text"><span class="card-provider">ANTHROPIC</span>
+                            <span class="card-reasoning reasoning-yes">Reasoning</span>
+                        </div>
+
+                    </div>
+                    <h3 class="card-name">Claude Sonnet 4</h3>
+                    <p class="card-tagline"> Best for complex analysis, long documents, and agentic workflows.</p>
+                    <ul class="card-specs">
+                        <li><span class="spec-label">Context</span><span class="spec-value">200K</span></li>
+                        <li><span class="spec-label">Input</span><span class="spec-value">$3 / 1M</span></li>
+                        <li><span class="spec-label">Output</span><span class="spec-value">$15 / 1M</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="logo-box">
+                            <img src="https://blog.kakaocdn.net/dna/bYa1xb/dJMcabpGZ8N/AAAAAAAAAAAAAAAAAAAAAE30ztAvYRW_DfnIXQcTxlPRV-Ei_p2NZ7rgKWJa4_Cz/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1780239599&allow_ip=&allow_referer=&signature=qYIxXUCbpLHUT8g4BHJdEfT5%2FAs%3D"
+                                alt="OpenAI">
+                        </div>
+                        <div class="text">
+                            <span class="card-provider">GOOGLE</span>
+                            <span class="card-reasoning reasoning-yes">Reasoning</span>
+                        </div>
+
+                    </div>
+                    <h3 class="card-name">Gemini 1.5 Pro</h3>
+                    <p class="card-tagline">Best for tasks requiring a very long context window of up to one million
+                        tokens.</p>
+                    <ul class="card-specs">
+                        <li><span class="spec-label">Context</span><span class="spec-value">1M</span></li>
+                        <li><span class="spec-label">Input</span><span class="spec-value">$1.25 / 1M</span></li>
+                        <li><span class="spec-label">Output</span><span class="spec-value">$5.00 / 1M</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="logo-box">
+                            <img src="https://aifundingtracker.com/wp-content/uploads/2026/02/metaai-color-1.png"
+                                alt="OpenAI">
+                        </div>
+                        <div class="text">
+                            <span class="card-provider"> META</span>
+                            <span class="card-reasoning reasoning-no">Reasoning</span>
+                        </div>
+
+                    </div>
+                    <h3 class="card-name">Llama 3.1 70B</h3>
+                    <p class="card-tagline">Best for cost-efficient deployments and open-source customisation.</p>
+                    <ul class="card-specs">
+                        <li><span class="spec-label">Context</span><span class="spec-value">128K</span></li>
+                        <li><span class="spec-label">Input</span><span class="spec-value">$0.59 / 1M</span></li>
+                        <li><span class="spec-label">Output</span><span class="spec-value">$0.79 / 1M</span></li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="logo-box">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_DaHGtoqrk8iozc9mWeQ8_1RXcxTlRI_dWA&s"
+                                alt="OpenAI">
+                        </div>
+                        <div class="text">
+                            <span class="card-provider">MISTRAL</span>
+                            <span class="card-reasoning reasoning-no">Reasoning</span>
+                        </div>
+
+                    </div>
+                    <h3 class="card-name">Mistral Large 2</h3>
+                    <p class="card-tagline">Best for European compliance requirements and multilingual tasks.</p>
+                    <ul class="card-specs">
+                        <li><span class="spec-label">Context</span><span class="spec-value">128K</span></li>
+                        <li><span class="spec-label">Input</span><span class="spec-value">$2.00 / 1M</span></li>
+                        <li><span class="spec-label">Output</span><span class="spec-value">$6.00 / 1M</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><em>Sources used: Up-to-date model specifications and pricing gathered from official provider documentation
+                (OpenAI, Anthropic, Google, DeepSeek) and <a href="https://artificialanalysis.ai/"
+                    target="_blank">Artificial Analysis</a>.</em></p>
+    </footer>
+</body>
+
+</html>
